@@ -30,7 +30,7 @@ truth machines in various languages.
 - PHP
 - Python
 - R
-- Rpckstar
+- Rockstar
 - Ruby
 - Rust
 - Scala
