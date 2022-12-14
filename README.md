@@ -3,6 +3,8 @@ truth machines in various languages.
 
 ### current languages
 - Blade
+- Bash
+- Bourne Shell
 - C
 - C++
 - C#
@@ -13,6 +15,7 @@ truth machines in various languages.
 - Dart
 - Elixir
 - F#
+- Fish
 - Go
 - Groovy
 - Haskell
