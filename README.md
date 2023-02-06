@@ -28,6 +28,7 @@ truth machines in various languages.
 - Lua
 - MarioLANG
 - Nim
+- Nushell
 - OCaml
 - Pascal
 - PHP
