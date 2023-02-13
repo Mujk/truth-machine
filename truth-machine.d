@@ -3,10 +3,7 @@ import std.stdio;
 void main() {
 	int truth;
 	readf("%d", truth);
-	for (;;){
+	do {
 		writeln(truth);
-		if (truth == 0) {	
-     			break;
-		}
-	}
+	} while (truth == 1);
 }

@@ -3,11 +3,9 @@
 int main() {
     int truth;
     scanf("%d", &truth);
-    while (1) {
+    do {
         printf("%d", truth);
-        if (truth == 0) {
-            break;
-        }   
     }
+    while (truth == 1);
     return 0;
 }

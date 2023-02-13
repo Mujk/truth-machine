@@ -3,11 +3,9 @@
 int main() {
     int truth; 
     std::cin >> truth;
-    while (true) {
+    do {
         std::cout << truth;
-        if (truth == 0) {
-            break;
-        }
-    } 
+    }
+    while(truth == 1);
     return 0;
 }
