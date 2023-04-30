@@ -1,6 +1,5 @@
 truth = gets.chomp.to_i
-while true do
+loop do
   print (truth)
-  break if truth == 0
-  end
+    break if truth == 0
 end

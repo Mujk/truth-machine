@@ -5,11 +5,8 @@ public class java_truth_machine {
     Scanner truthReader = new Scanner(System.in);
     int truth = Integer.parseInt(truthReader.nextLine()); 
     truthReader.close();
-      while (true) {
+      do {
         System.out.println(truth);
-        if (truth == 0) {
-          break;
-        }
-      }
+      }while(truth == 1);
   }
 }
