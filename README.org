@@ -1,10 +1,10 @@
 # Truth Machine
 truth machines in various languages.
 
-### current languages
+* current languages
 Blade, Bash, Bourne Shell, C, C++, C#, Clojure, Common Lisp, Crystal, D, Dart, Elixir, F#, Fish, Go, Groovy, Haskell, Haxe, Io, Java, JavaScript, Julia, Kotlin, Lua, MarioLANG, Nim, Nushell, OCaml, Pascal, PHP, Python, R, Rockstar, Ruby, Rust, Scala, Smalltalk, Swift, V, Vala
 
-* Blade
+** Blade
 #+BEGIN_SRC blade
 import io { readline }
 
@@ -14,7 +14,7 @@ while true {
       if truth == 0 break
 }
 #+END_SRC
-* Bash
+** Bash
 #+BEGIN_SRC bash
 #!/bin/bash
 read truth
@@ -26,7 +26,7 @@ do
   fi
 done
 #END_SRC
-* Bourne Shell
+** Bourne Shell
 #+BEGIN_SRC sh
 #!/bin/sh
 read truth
@@ -39,7 +39,7 @@ do
   fi
 done
 #+END_SRC
-* C
+** C
 #+BEGIN_SRC C
 #include  <stdio.h>
 
@@ -53,8 +53,8 @@ int main() {
     return 0;
 }
 #+END_SRC
-* C++
-#BEGIN_SRC C++
+** C++
+#+BEGIN_SRC C++
 #include <iostream>
 
 int main() {
@@ -67,7 +67,7 @@ int main() {
     return 0;
 }
 #+END_SRC
-* C#
+** C#
 #+BEGIN_SRC C#
 using System;
 class csharp_truth_machine {
@@ -82,7 +82,7 @@ class csharp_truth_machine {
   }
 }
 #+END_SRC
-* Clojure
+** Clojure
 #+BEGIN_SRC clojure
 (let [truth (Integer/parseInt(read-line))]
     (loop []
@@ -90,14 +90,14 @@ class csharp_truth_machine {
         (when (= truth 1)
             (recur))))
 #+END_SRC
-* Common Lisp
+** Common Lisp
 #+BEGIN_SRC lisp
 (let ((truth (read)))
 	(loop
 	do (format t "~d~%" truth)
 	until (= truth 0)))
 #+END_SRC
-* Crystal
+** Crystal
 #+BEGIN_SRC crystal
 truth = gets.not_nil!.to_i
 while true
@@ -105,7 +105,7 @@ while true
     break if truth == 0
 end
 #+END_SRC
-* D
+** D
 #+BEGIN_SRC D
 import std.stdio;
 
@@ -117,7 +117,7 @@ void main() {
 	} while (truth == 1);
 }
 #+END_SRC
-* Dart
+** Dart
 #+BEGIN_SRC dart
 import 'dart:io';
 
@@ -134,7 +134,7 @@ void main() {
   }
 }
 #+END_SRC
-* Elixir
+** Elixir
 #+BEGIN_SRC elixir
 defmodule Print do
   def loop(0) do
@@ -152,7 +152,7 @@ end
     |> String.to_integer()
     |> Print.loop
 #+END_SRC
-* F#
+** F#
 #+BEGIN_SRC F#
 open System
 
@@ -162,7 +162,7 @@ let rec loop (truth : int) =
 
 Console.ReadLine() |> int |> loop
 #END_SRC
-* Fish
+** Fish
 #+BEGIN_SRC fish
 #!/bin/fish
 read truth
@@ -173,7 +173,7 @@ while true;
     end
 end
 #+END_SRC
-* Go
+** Go
 #+BEGIN_SRC Go
 package main
 
@@ -190,7 +190,7 @@ func main() {
 	}
 }
 #+END_SRC
-* Groovy
+** Groovy
 #+BEGIN_SRC groovy
 def truth = System.in.newReader().readLine() as Integer
 while (true) {
@@ -200,7 +200,7 @@ while (true) {
     }
 }
 #+END_SRC
-* Haskell
+** Haskell
 #+BEGIN_SRC haskell
 import System.IO (stdout)
 
@@ -214,7 +214,7 @@ main = do
     truth <- readLn :: IO Integer
     loop truth
 #+END_SRC
-* Haxe
+** Haxe
 #+BEGIN_SRC haxe
 class Haxe_truth_machine {
     static public function main():Void {
@@ -228,7 +228,7 @@ class Haxe_truth_machine {
     }
 }
 #+END_SRC
-* Io
+** Io
 #+BEGIN_SRC Io
 truth := File clone standardInput readLine("") asNumber
 loop(
@@ -236,7 +236,7 @@ loop(
 	if (truth == 0, break)
 )
 #+END_SRC
-* Java
+** Java
 #+BEGIN_SRC java
 import java.util.Scanner;
 
@@ -251,7 +251,7 @@ public class java_truth_machine {
   }
 }
 #+END_SRC
-* JavaScript
+** JavaScript
 #+BEGIN_SRC js
 const truth = Number(prompt());
 while (true) {
@@ -259,7 +259,7 @@ while (true) {
   if (truth === 0) break;
 }
 #+END_SRC
-* Julia
+** Julia
 #+BEGIN_SRC julia
 truth = parse(Int, readline())
     while (true)
@@ -269,7 +269,7 @@ truth = parse(Int, readline())
     end
 end
 #+END_SRC
-* Kotlin
+** Kotlin
 #+BEGIN_SRC kotlin
 fun main(){
     val truth = Integer.valueOf(readLine())
@@ -281,7 +281,7 @@ fun main(){
     }
 }
 #+END_SRC
-* Lua
+** Lua
 #+BEGIN_SRC Lua
 truth = io.read("*n")
 while (truth) do
@@ -291,12 +291,12 @@ while (truth) do
     end
 end
 #+END_SRC
-* MarioLANG
+** MarioLANG
 #+BEGIN_SRC MarioLANG
 >;>:[<!
 =======
 #+END_SRC
-* Nim
+** Nim
 #+BEGIN_SRC nim
 from std/strutils import parseInt
 
@@ -306,7 +306,7 @@ while true:
   if truth == 0:
     break
 #+END_SRC
-* Nushell
+** Nushell
 #+BEGIN_SRC nushell
 let truth = ((input) | into int)
 while true {
@@ -316,7 +316,7 @@ while true {
   }
 }
 #+END_SRC
-* OCaml
+** OCaml
 #+BEGIN_SRC ocaml
 let rec loop truth =
 	truth |> print_int;
@@ -325,7 +325,7 @@ let rec loop truth =
 let truth = read_int();;
 truth |> loop
 #+END_SRC
-* Pascal
+** Pascal
 #+BEGIN_SRC pascal
 program Truth_machine;
 var truth: integer;
@@ -341,7 +341,7 @@ begin
     end;
 end.
 #+END_SRC
-* PHP
+** PHP
 #+BEGIN_SRC php
 <?php
     $truth = (int) fgets(STDIN);
@@ -352,7 +352,7 @@ end.
     }
 ?>
 #+END_SRC
-* Python
+** Python
 #+BEGIN_SRC python
 truth = int(input(""))
 while True:
@@ -360,7 +360,7 @@ while True:
     if truth == 0:
         break
 #+END_SRC
-* R
+** R
 #+BEGIN_SRC R
 truth <- readLines(con="stdin", 1)
 while (TRUE) {
@@ -370,7 +370,7 @@ while (TRUE) {
 	}
 }
 #+END_SRC
-* Rockstar
+** Rockstar
 #+BEGIN_SRC rockstar
 Listen to the truth
 While ok
@@ -378,7 +378,7 @@ Say the truth
 If the truth is gone
 Break it down
 #+END_SRC
-* Ruby
+** Ruby
 #+BEGIN_SRC ruby
 truth = gets.chomp.to_i
 loop do
@@ -386,7 +386,7 @@ loop do
     break if truth == 0
 end
 #+END_SRC
-* Rust
+** Rust
 #+BEGIN_SRC rust
 use std::io;
 
@@ -402,7 +402,7 @@ fn main() {
     }
 }
 #+END_SRC
-* Scala
+** Scala
 #+BEGIN_SRC scala
 object TruthMachine {
     def loop(truth:Int) {
@@ -417,13 +417,13 @@ object TruthMachine {
     }
 }
 #+END_SRC
-* Smalltalk
+** Smalltalk
 #+BEGIN_SRC smalltalk
 truth := stdin nextLine asInteger.
 truth = 0 ifTrue: [ truth display. ].
 [truth = 1] whileTrue: [ truth display. ]
 #+END_SRC
-* Swift
+** Swift
 #+BEGIN_SRC swift
 var truth:Int?
 truth = Int(readLine()!)
@@ -434,7 +434,7 @@ if (truth == 0) {
     }
 }
 #+END_SRC
-* V
+** V
 #+BEGIN_SRC V
 import os
 
@@ -448,7 +448,7 @@ fn main() {
       }
 }
 #+END_SRC
-* Vala
+** Vala
 #+BEGIN_SRC vala
 void main() {
 	int truth = int.parse(stdin.read_line());
