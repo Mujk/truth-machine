@@ -1,0 +1,462 @@
+# Truth Machine
+truth machines in various languages.
+
+### current languages
+Blade, Bash, Bourne Shell, C, C++, C#, Clojure, Common Lisp, Crystal, D, Dart, Elixir, F#, Fish, Go, Groovy, Haskell, Haxe, Io, Java, JavaScript, Julia, Kotlin, Lua, MarioLANG, Nim, Nushell, OCaml, Pascal, PHP, Python, R, Rockstar, Ruby, Rust, Scala, Smalltalk, Swift, V, Vala
+
+* Blade
+#+BEGIN_SRC blade
+import io { readline }
+
+var truth = to_number(readline())
+while true {
+      echo truth
+      if truth == 0 break
+}
+#+END_SRC
+* Bash
+#+BEGIN_SRC bash
+#!/bin/bash
+read truth
+while :
+do
+  echo $truth
+  if [[ $((truth)) -eq 0 ]]; then
+    break
+  fi
+done
+#END_SRC
+* Bourne Shell
+#+BEGIN_SRC sh
+#!/bin/sh
+read truth
+while :
+do
+  echo $truth
+  if [[ $((truth)) -eq 0 ]]
+  then
+    break
+  fi
+done
+#+END_SRC
+* C
+#+BEGIN_SRC C
+#include  <stdio.h>
+
+int main() {
+    int truth;
+    scanf("%d", &truth);
+    do {
+        printf("%d", truth);
+    }
+    while (truth == 1);
+    return 0;
+}
+#+END_SRC
+* C++
+#BEGIN_SRC C++
+#include <iostream>
+
+int main() {
+    int truth;
+    std::cin >> truth;
+    do {
+        std::cout << truth;
+    }
+    while(truth == 1);
+    return 0;
+}
+#+END_SRC
+* C#
+#+BEGIN_SRC C#
+using System;
+class csharp_truth_machine {
+  static void Main() {
+    int truth = Convert.ToInt32(Console.ReadLine());
+    while (true) {
+      Console.WriteLine(truth);
+      if (truth == 0) {
+        break;
+      }
+    }
+  }
+}
+#+END_SRC
+* Clojure
+#+BEGIN_SRC clojure
+(let [truth (Integer/parseInt(read-line))]
+    (loop []
+        (println truth)
+        (when (= truth 1)
+            (recur))))
+#+END_SRC
+* Common Lisp
+#+BEGIN_SRC lisp
+(let ((truth (read)))
+	(loop
+	do (format t "~d~%" truth)
+	until (= truth 0)))
+#+END_SRC
+* Crystal
+#+BEGIN_SRC crystal
+truth = gets.not_nil!.to_i
+while true
+    puts truth
+    break if truth == 0
+end
+#+END_SRC
+* D
+#+BEGIN_SRC D
+import std.stdio;
+
+void main() {
+	int truth;
+	readf("%d", truth);
+	do {
+		writeln(truth);
+	} while (truth == 1);
+}
+#+END_SRC
+* Dart
+#+BEGIN_SRC dart
+import 'dart:io';
+
+void main() {
+  String? truthString = stdin.readLineSync();
+  if (truthString != null) {
+    int truth = int.parse(truthString);
+    while (true) {
+      print(truth);
+      if (truth == 0) {
+        break;
+      }
+    }
+  }
+}
+#+END_SRC
+* Elixir
+#+BEGIN_SRC elixir
+defmodule Print do
+  def loop(0) do
+    0 |> IO.puts
+  end
+
+  def loop(1) do
+    1 |> IO.puts
+    1 |> loop
+  end
+end
+
+""  |> IO.gets()
+    |> String.trim_trailing()
+    |> String.to_integer()
+    |> Print.loop
+#+END_SRC
+* F#
+#+BEGIN_SRC F#
+open System
+
+let rec loop (truth : int) =
+    truth |> Console.Write;
+    if truth = 1 then truth |> loop
+
+Console.ReadLine() |> int |> loop
+#END_SRC
+* Fish
+#+BEGIN_SRC fish
+#!/bin/fish
+read truth
+while true;
+    echo $truth;
+    if [ $truth -eq 0 ]
+        break
+    end
+end
+#+END_SRC
+* Go
+#+BEGIN_SRC Go
+package main
+
+import "fmt"
+
+func main() {
+	var truth int
+	fmt.Scan(&truth)
+	for {
+		fmt.Println(truth)
+		if truth == 0 {
+			break
+		}
+	}
+}
+#+END_SRC
+* Groovy
+#+BEGIN_SRC groovy
+def truth = System.in.newReader().readLine() as Integer
+while (true) {
+    println "$truth"
+    if (truth == 0) {
+        break
+    }
+}
+#+END_SRC
+* Haskell
+#+BEGIN_SRC haskell
+import System.IO (stdout)
+
+loop 0 = do print 0
+
+loop 1 = do
+	print 1
+	loop 1
+
+main = do
+    truth <- readLn :: IO Integer
+    loop truth
+#+END_SRC
+* Haxe
+#+BEGIN_SRC haxe
+class Haxe_truth_machine {
+    static public function main():Void {
+        var truth = Std.parseInt(Sys.stdin().readLine());
+        while (true) {
+            trace(truth);
+            if (truth == 0) {
+                break;
+            }
+        }
+    }
+}
+#+END_SRC
+* Io
+#+BEGIN_SRC Io
+truth := File clone standardInput readLine("") asNumber
+loop(
+	write(truth)
+	if (truth == 0, break)
+)
+#+END_SRC
+* Java
+#+BEGIN_SRC java
+import java.util.Scanner;
+
+public class java_truth_machine {
+  public static void main(String[] args) {
+    Scanner truthReader = new Scanner(System.in);
+    int truth = Integer.parseInt(truthReader.nextLine());
+    truthReader.close();
+      do {
+        System.out.println(truth);
+      }while(truth == 1);
+  }
+}
+#+END_SRC
+* JavaScript
+#+BEGIN_SRC js
+const truth = Number(prompt());
+while (true) {
+  console.log(truth)
+  if (truth === 0) break;
+}
+#+END_SRC
+* Julia
+#+BEGIN_SRC julia
+truth = parse(Int, readline())
+    while (true)
+    	truth |> print
+    if (truth == 0)
+    	break
+    end
+end
+#+END_SRC
+* Kotlin
+#+BEGIN_SRC kotlin
+fun main(){
+    val truth = Integer.valueOf(readLine())
+    while (true) {
+        println(truth)
+        if (truth == 0) {
+            break
+        }
+    }
+}
+#+END_SRC
+* Lua
+#+BEGIN_SRC Lua
+truth = io.read("*n")
+while (truth) do
+    print (truth)
+    if (truth == 0) then
+        break
+    end
+end
+#+END_SRC
+* MarioLANG
+#+BEGIN_SRC MarioLANG
+>;>:[<!
+=======
+#+END_SRC
+* Nim
+#+BEGIN_SRC nim
+from std/strutils import parseInt
+
+let truth = parseInt(readLine(stdin))
+while true:
+  echo truth
+  if truth == 0:
+    break
+#+END_SRC
+* Nushell
+#+BEGIN_SRC nushell
+let truth = ((input) | into int)
+while true {
+  echo $truth
+  if $truth == 0 {
+    break
+  }
+}
+#+END_SRC
+* OCaml
+#+BEGIN_SRC ocaml
+let rec loop truth =
+	truth |> print_int;
+	if truth == 1 then truth |> loop
+
+let truth = read_int();;
+truth |> loop
+#+END_SRC
+* Pascal
+#+BEGIN_SRC pascal
+program Truth_machine;
+var truth: integer;
+begin
+    readLn(input, truth);
+    while true do
+    begin
+        writeLn (output, truth);
+        if truth = 0 then
+        begin
+            break;
+        end;
+    end;
+end.
+#+END_SRC
+* PHP
+#+BEGIN_SRC php
+<?php
+    $truth = (int) fgets(STDIN);
+    while (true) {
+        print($truth);
+        if ($truth == 0)
+            break;
+    }
+?>
+#+END_SRC
+* Python
+#+BEGIN_SRC python
+truth = int(input(""))
+while True:
+    print (truth)
+    if truth == 0:
+        break
+#+END_SRC
+* R
+#+BEGIN_SRC R
+truth <- readLines(con="stdin", 1)
+while (TRUE) {
+	cat(truth)
+	if (truth == 0) {
+	    break
+	}
+}
+#+END_SRC
+* Rockstar
+#+BEGIN_SRC rockstar
+Listen to the truth
+While ok
+Say the truth
+If the truth is gone
+Break it down
+#+END_SRC
+* Ruby
+#+BEGIN_SRC ruby
+truth = gets.chomp.to_i
+loop do
+  print (truth)
+    break if truth == 0
+end
+#+END_SRC
+* Rust
+#+BEGIN_SRC rust
+use std::io;
+
+fn main() {
+    let mut truth = String::new();
+    io::stdin().read_line(&mut truth).unwrap();
+    let truth: i32 = truth.trim().parse().unwrap();
+    loop {
+        println!("{}", truth);
+        if truth == 0 {
+            break;
+        }
+    }
+}
+#+END_SRC
+* Scala
+#+BEGIN_SRC scala
+object TruthMachine {
+    def loop(truth:Int) {
+        println(truth)
+        if (truth == 1) {
+            loop(truth)
+        }
+    }
+
+    def main(args: Array[String]) {
+        loop(scala.io.StdIn.readLine().toInt)
+    }
+}
+#+END_SRC
+* Smalltalk
+#+BEGIN_SRC smalltalk
+truth := stdin nextLine asInteger.
+truth = 0 ifTrue: [ truth display. ].
+[truth = 1] whileTrue: [ truth display. ]
+#+END_SRC
+* Swift
+#+BEGIN_SRC swift
+var truth:Int?
+truth = Int(readLine()!)
+while (true) {
+    print(truth!)
+if (truth == 0) {
+    break
+    }
+}
+#+END_SRC
+* V
+#+BEGIN_SRC V
+import os
+
+fn main() {
+    truth := os.input()
+    for {
+      print (truth)
+      if truth == 0 {
+        break
+            }
+      }
+}
+#+END_SRC
+* Vala
+#+BEGIN_SRC vala
+void main() {
+	int truth = int.parse(stdin.read_line());
+	while (true) {
+		stdout.printf(truth.to_string());
+		if (truth == 0) {
+			break;
+		}
+	}
+}
+#+END_SRC
